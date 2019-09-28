@@ -13,10 +13,10 @@ class MyApp extends StatelessWidget {
         //   backgroundColor: Colors.blue[900],
         // ),
         body: SafeArea(
-          child: Row(
-            mainAxisAlignment: MainAxisAlignment.spaceBetween,
+          child: Row( // RowClassの後はchildrenを作る
+            mainAxisAlignment: MainAxisAlignment.spaceBetween, // 配置の調整
             children: <Widget>[
-              Container(
+              Container( // 各パーツ部分
                 color:Colors.red,
                 width: 100.0,
                 height: double.infinity,
