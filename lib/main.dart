@@ -34,58 +34,47 @@ class MyApp extends StatelessWidget {
                   letterSpacing: 2.0,
                 ),
               ),
-              Container(
+              SizedBox(
+                width: 450,
+                height: 20.0,
+                child: Divider(
+                  color: Colors.white
+                ),
+              ),
+              Card(
                 color: Colors.white,
                 margin:EdgeInsets.symmetric(vertical: 20.0, horizontal: 500.0),
-                padding: EdgeInsets.all(10.0),
-                child: Row(
-                  children: <Widget>[
-                    Icon(
-                      Icons.phone,
-                      color: Colors.black
+                child: ListTile(
+                  leading: Icon(
+                    Icons.phone,
+                    color: Colors.black,
+                  ),
+                  title: Text(
+                    '090-0000-0000',
+                    style: TextStyle(
+                      fontFamily: 'SourceSansPro',
+                      color: Colors.black,
+                      fontSize: 20.0,
                     ),
-                    SizedBox(
-                      width: 10.0,
-                    ),
-                    Text(
-                      ('090-1234-5678'),
-                      style:TextStyle(
-                        fontFamily: 'SourceSansPro',
-                        color: Colors.black,
-                        fontSize: 20.0,
-                      )
-                    ),
-                  ],
-                )
+                  ),
+                ),
               ),
-              Container(
+              Card(
                 color: Colors.white,
                 margin: EdgeInsets.symmetric(vertical: 20.0, horizontal: 500.0),
-                padding: EdgeInsets.all(10.0),
-                // decoration: BoxDecoration(
-                //   borderRadius: BorderRadius.only(
-                //     topLeft:  const  Radius.circular(40.0),
-                //     topRight: const  Radius.circular(40.0))
-                // ),
-                child: Row(
-                  children: <Widget>[
-                    Icon(
-                      Icons.email,
+                child: ListTile(
+                  leading: Icon(
+                    Icons.email,
+                    color:Colors.black,
+                  ),
+                  title: Text(
+                    'email@cloud.com',
+                    style: TextStyle(
+                      fontFamily: 'SourceSansPro',
                       color: Colors.black,
-                      
+                      fontSize: 20.0,
                     ),
-                    SizedBox(
-                      width: 10.0,
-                    ),
-                    Text(
-                      ('email@cloud.com'),
-                      style: TextStyle(
-                        fontFamily: 'SourceSansPro',
-                        color: Colors.black,
-                        fontSize: 20.0,
-                      ),
-                    ),
-                  ],
+                  ),
                 ),
               ),
             ],
@@ -95,6 +84,26 @@ class MyApp extends StatelessWidget {
     );
   }
 }
+// Row(
+//   children: <Widget>[
+//     Icon(
+//       Icons.email,
+//       color: Colors.black,
+      
+//     ),
+//     SizedBox(
+//       width: 10.0,
+//     ),
+//     Text(
+//       ('email@cloud.com'),
+//       style: TextStyle(
+//         fontFamily: 'SourceSansPro',
+//         color: Colors.black,
+//         fontSize: 20.0,
+//       ),
+//     ),
+//   ],
+// ),
 
 // class MyHomePage extends StatefulWidget {
 //   MyHomePage({Key key, this.title}) : super(key: key);
