@@ -7,40 +7,86 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       home: Scaffold(
-        backgroundColor: Colors.teal,
-        // appBar: AppBar(
-        //   title: Text('hello data'),
-        //   backgroundColor: Colors.blue[900],
-        // ),
+        backgroundColor: Colors.blue,
         body: SafeArea(
-          child: Row( // RowClassの後はchildrenを作る
-            mainAxisAlignment: MainAxisAlignment.spaceBetween, // 配置の調整
+          child: Column( // RowClassの後はchildrenを作る
+            crossAxisAlignment: CrossAxisAlignment.center,
+            mainAxisAlignment: MainAxisAlignment.center,
             children: <Widget>[
-              Container( // 各パーツ部分
-                color:Colors.red,
-                width: 100.0,
-                height: double.infinity,
+              CircleAvatar(
+                radius: 50.0,
+                backgroundImage: AssetImage('images/user.jpg'),
               ),
-              Column(
-                mainAxisAlignment: MainAxisAlignment.center,
-                children: <Widget>[
-                  Container(
-                    color: Colors.yellow,
-                    width: 100,
-                    height: 100,
-                  ),
-                  Container(
-                    color: Color.fromRGBO(255, 255, 0, 0.5),
-                    width: 100,
-                    height: 200,
-                  ),
-                ],
+              Text(
+                ('Ryoto'),
+                style:TextStyle(
+                  fontFamily: 'Pacifico',
+                  fontSize: 40.0,
+                  fontWeight: FontWeight.bold,
+                )
+              ),
+              Text(
+                ('Flutter Callsystem'),
+                style:TextStyle(
+                  fontFamily: 'SourceSansPro',
+                  fontSize: 20.0,
+                  fontWeight: FontWeight.bold,
+                  letterSpacing: 2.0,
+                ),
               ),
               Container(
-                padding:EdgeInsets.only(top: 50),
-                color:Colors.blue,
-                width: 100.0,
-                height: double.infinity,
+                color: Colors.white,
+                margin:EdgeInsets.symmetric(vertical: 20.0, horizontal: 500.0),
+                padding: EdgeInsets.all(10.0),
+                child: Row(
+                  children: <Widget>[
+                    Icon(
+                      Icons.phone,
+                      color: Colors.black
+                    ),
+                    SizedBox(
+                      width: 10.0,
+                    ),
+                    Text(
+                      ('090-1234-5678'),
+                      style:TextStyle(
+                        fontFamily: 'SourceSansPro',
+                        color: Colors.black,
+                        fontSize: 20.0,
+                      )
+                    ),
+                  ],
+                )
+              ),
+              Container(
+                color: Colors.white,
+                margin: EdgeInsets.symmetric(vertical: 20.0, horizontal: 500.0),
+                padding: EdgeInsets.all(10.0),
+                // decoration: BoxDecoration(
+                //   borderRadius: BorderRadius.only(
+                //     topLeft:  const  Radius.circular(40.0),
+                //     topRight: const  Radius.circular(40.0))
+                // ),
+                child: Row(
+                  children: <Widget>[
+                    Icon(
+                      Icons.email,
+                      color: Colors.black,
+                      
+                    ),
+                    SizedBox(
+                      width: 10.0,
+                    ),
+                    Text(
+                      ('email@cloud.com'),
+                      style: TextStyle(
+                        fontFamily: 'SourceSansPro',
+                        color: Colors.black,
+                        fontSize: 20.0,
+                      ),
+                    ),
+                  ],
+                ),
               ),
             ],
           ),
